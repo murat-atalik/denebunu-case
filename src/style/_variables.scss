@@ -1,0 +1,70 @@
+$background: #fff;
+$blue: #074ee8;
+$input-inner: #f0f8ff;
+
+$grey-500: #3e3e3e;
+$grey-400: #555555;
+$grey-300: #767676;
+$grey-200: #aaaaaa;
+$grey-100: #b1b1b1;
+
+$white-500: #ebebeb;
+$white-400: #eaeaea;
+$white-300: #f4f4f4;
+$white-200: #f2f2f2;
+$white-100: #ffffff;
+
+$btn-grey: #eeeeee;
+
+$header-color: #000;
+
+$vw-viewport: 1920px;
+@function get-vw($px-vw) {
+  @return ($px-vw * 100vw) / $vw-viewport;
+}
+$vh-viewport: 1080px;
+@function get-vh($px-vh) {
+  @return ($px-vh * 100vh) / $vh-viewport;
+}
+
+%container {
+  width: calc(50% - 15px);
+  padding: 18px;
+  border: 1px solid #dddddd;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+%chalk-font {
+  font-family: Pangolin;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+%default-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 16px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    transform: scale(1.05);
+  }
+  @extend %chalk-font;
+}
+%primary-btn {
+  color: $white-100;
+  background-color: $blue;
+  @extend %default-btn;
+}
+%secondary-btn {
+  background-color: $btn-grey;
+  color: $grey-300;
+
+  @extend %default-btn;
+}

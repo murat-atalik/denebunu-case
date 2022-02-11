@@ -1,0 +1,35 @@
+@import './../../style/variables';
+
+.review-container {
+  @extend %container;
+  width: 100%;
+  margin-top: 22px;
+  border-color: $blue;
+  p {
+    @extend %chalk-font;
+    line-height: 22px;
+  }
+}
+.review-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  > h2 {
+    @extend %chalk-font;
+    line-height: 22px;
+    padding-left: 10px;
+    color: $blue;
+  }
+  > img {
+    width: 32px;
+    height: 32px;
+  }
+}
+.categories-detail {
+  margin-top: 30px;
+}
+@media only screen and (max-width: 880px) {
+  .review-container {
+    height: 100%;
+  }
+}

@@ -1,0 +1,57 @@
+@import './reset';
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import './variables';
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: $white-100;
+}
+.app-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 get-vw(175px);
+}
+
+input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: $white-100;
+  border: 2px solid $grey-200;
+  cursor: pointer;
+  position: relative;
+}
+input[type='checkbox']::before {
+  position: absolute;
+  bottom: 4px;
+  left: -4px;
+  height: 5px;
+  width: 2px;
+  background-color: $white-100;
+  content: '';
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+input[type='checkbox']::after {
+  position: absolute;
+  left: -4px;
+  bottom: 4px;
+  height: 2px;
+  width: 10px;
+  background-color: $white-100;
+  content: '';
+  transform: translateX(10px) rotate(-45deg);
+  transform-origin: left bottom;
+}
+input[type='checkbox']:checked {
+  background-color: $blue;
+  border: 2px solid $blue;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .app-container {
+    margin: 0 get-vw(100px);
+  }
+}
