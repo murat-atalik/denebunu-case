@@ -35,7 +35,7 @@ function CategoryDetail({
   };
 
   return (
-    <div className="category-detail-container ">
+    <div className="category-detail-container">
       <div className="category-detail-container-inner">
         <div className="category-title">
           <img src={categoryIcon} alt="categoryIcon" />
